@@ -15,6 +15,7 @@ tmp
 
 # Testing output
 coverage
+jest_0
 
 # Build
 client

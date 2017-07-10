@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
+import initReactFastclick from 'react-fastclick';
 import App from './containers';
 import './styles/main.scss';
+
+// fast-click
+initReactFastclick();
 
 // offline-plugin
 OfflinePluginRuntime.install({
