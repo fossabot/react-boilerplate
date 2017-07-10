@@ -14,6 +14,7 @@ results
 tmp
 
 # Testing output
+stats.json
 coverage
 jest_0
 
