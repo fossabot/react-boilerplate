@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".js"] }],
+    "jsx-a11y/href-no-hash": "off",
+    "valid-jsdoc": [2, {
+      "requireParamDescription": false,
+      "requireReturnDescription": false,
+      "requireReturn": false
+    }]
+  }
+}

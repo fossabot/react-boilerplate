@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "stylelint-scss",
+    "./node_modules/stylelint-no-browser-hacks/lib/",
+    "stylelint-no-unsupported-browser-features"
+  ],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [true, {
+      "browsers": ["last 2 versions", "not ie 10"],
+      "ignore": ["rem"]
+    }],
+    "plugin/no-browser-hacks": [true, {
+      "browsers": ["last 2 versions", "not ie 10"]
+    }]
+  }
+}
