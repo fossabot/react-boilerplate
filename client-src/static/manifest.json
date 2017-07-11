@@ -1,6 +1,6 @@
 {
-  "name": "Webpack React",
-  "short_name": "WP React",
+  "name": "React Boilerplate",
+  "short_name": "React BP",
   "start_url": "/?homescreen=1",
   "display": "standalone",
   "orientation": "portrait",
