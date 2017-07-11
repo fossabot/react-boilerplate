@@ -1,0 +1,23 @@
+version: '3'
+services:
+  ###############################
+  # Built from local Dockerfile #
+  ###############################
+  web:
+    # Build the Dockerfile in this directory.
+    build: .
+    # Mount this directory as a volume at /app
+    volumes:
+      - '.:/app'
+    # Make all commands relative to our application directory
+    working_dir: /app
+    # The process that runs in the container.
+    # Remeber, a container runs only ONE process.
+    command: 'npm run server'
+    # Set some environment variables to be used in the application
+    environment:
+      PORT: 8000
+    # Make the port available on the host machine
+    # so that we can navigate there with our web browser.
+    ports:
+      - '8000:8000'

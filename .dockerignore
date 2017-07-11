@@ -1,0 +1,10 @@
+.git/
+.github/
+client/
+client-src/
+config/
+coverage/
+docs/
+jest_0/
+node_modules/
+packages-cache/
