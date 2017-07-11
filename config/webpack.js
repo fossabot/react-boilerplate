@@ -56,7 +56,7 @@ module.exports = env => {
 			]
 		},
 		plugins: setup(isProd),
-		devtool: !isProd && "eval",
+		devtool: !isProd && "source-map",
 		devServer: {
 			contentBase: client,
 			port: process.env.PORT || 3000,
