@@ -5,18 +5,23 @@ html {
 body {
 	background: lightgray;
 	font-size: 1rem;
+	text-align: center;
 }
 
-// a { color/*\**/: pink\9; }
+.c-nav {
+	border-bottom: .1rem solid gray;
+	list-style: none;
+	margin: 0 0 2rem;
 
-// .testingBatman {
-// 	font-weight: bold;
-// 	font-size: .4rem;
-// }
+	li {
 
-// .wrapper {
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   grid-gap: 10px;
-//   grid-auto-rows: minmax(100px, auto);
-// }
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		display: inline-block;
+		padding: .5rem 1rem;
+	}
+}

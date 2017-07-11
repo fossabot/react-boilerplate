@@ -26,9 +26,11 @@ class App extends Component {
       <Router>
         <div>
           <img src="static/img/doge.png" alt="favicon for site" />
-          <Link to="/">Home</Link>
-          <Link to="/new">New</Link>
-          <Link to="/component">Component</Link>
+          <ul className="c-nav">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/new">New</Link></li>
+            <li><Link to="/component">Component</Link></li>
+          </ul>
           <Route path="/" exact render={() => (<div>{this.props.content}</div>)} />
           <Route path="/new" render={() => (<div>This is New</div>)} />
           <Route path="/component" component={TestComponent} />
