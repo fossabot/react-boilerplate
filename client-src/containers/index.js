@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { Flag, Segment } from 'semantic-ui-react';
 import TestComponent from '../components/testComponent';
 
 class App extends Component {
@@ -26,6 +27,11 @@ class App extends Component {
       <Router>
         <div>
           <img src="static/img/doge.png" alt="favicon for site" />
+          <Segment>
+            <Flag name="ae" />
+            <Flag name="france" />
+            <Flag name="myanmar" />
+          </Segment>
           <ul className="c-nav">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/new">New</Link></li>
