@@ -25,6 +25,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <img src="static/img/doge.png" alt="favicon for site" />
           <Link to="/">Home</Link>
           <Link to="/new">New</Link>
           <Link to="/component">Component</Link>

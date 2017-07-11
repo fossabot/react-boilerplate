@@ -1,6 +1,8 @@
 const { join } = require('path');
 const webpack = require('webpack');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const ExtractText = require('extract-text-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const OfflinePlugin = require('offline-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const Clean = require('clean-webpack-plugin');
@@ -13,7 +15,8 @@ module.exports = isProd => {
 	// base plugins array
 	const plugins = [
 		new Clean(['client'], { root }),
-		new Copy([{ context: 'client-src/static/', from: '**/*.*' }]),
+		new Copy([{ context: 'client-src/static/', from: '**/*.*', to: 'static' }]),
+		new CaseSensitivePathsPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(isProd ? 'production' : 'development')
@@ -39,6 +42,28 @@ module.exports = isProd => {
 	if (isProd) {
 		plugins.push(
 			new webpack.LoaderOptionsPlugin({ minimize: true, debug: true }),
+			new ImageminPlugin({
+				test: /\.(jpe?g|png|gif|svg)$/i,
+		    optipng: {
+	        optimizationLevel: 7,
+		    },
+		    pngquant: {
+	        quality: '65-90',
+	        speed: 4,
+		    },
+		    gifsicle: {
+	        optimizationLevel: 3,
+		    },
+		    svgo: {
+	        plugins: [{
+            removeViewBox: false,
+            removeEmptyAttrs: true,
+	        }],
+		    },
+		    jpegtran: {
+	        progressive: true,
+		    },
+	    }),
 			new webpack.optimize.UglifyJsPlugin({
 				output: {
 					comments: 0
