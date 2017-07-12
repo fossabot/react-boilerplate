@@ -2,8 +2,13 @@
 
 This is a React boilerplate with a bunch of features including linting for Sass/SCSS and ECMAScript with AirBnB's rules, Webpack Bundling and Minification, Jest Testing, PWA service worker generating, Offline packages with Yarn, and a Node server with Express for hosting.
 
+## Quick Start
+1. Clone the Repo.
+1. Navigate to the repo directory and install packages with `yarn`.
+1. Start the development server with `yarn start`
+
 ## To Do
-[ ] Get fix for `why-did-you-update` from [this issue](https://github.com/garbles/why-did-you-update/issues/45)
+- [ ] Get fix for `why-did-you-update` from [this issue](https://github.com/garbles/why-did-you-update/issues/45)
 
 ## Docker
 
@@ -22,6 +27,10 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just run `yarn install –offline` in your shell.
 
 ## Tools
+
+### IDE
+- [Webstorm](https://www.jetbrains.com/webstorm/) (for large projects)
+- [VS Code](https://code.visualstudio.com/) (for basic projects)
 
 ### Chrome Extensions
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
