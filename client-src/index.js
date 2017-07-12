@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
-// import { whyDidYouUpdate } from 'why-did-you-update';
 import store from './store';
 import App from './containers';
 import './styles/main.scss';
 
-// why did you update
-// whyDidYouUpdate(React);
+// if (process.env.NODE_ENV !== 'production') {
+//   /* eslint-disable */
+//   const { whyDidYouUpdate } = require('why-did-you-update');
+//   /* eslint-disable */
+
+//   whyDidYouUpdate(React);
+// }
 
 // offline-plugin
 OfflinePluginRuntime.install({
