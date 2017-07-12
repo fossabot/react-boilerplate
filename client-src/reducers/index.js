@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import state from './stateReducer';
 import content from './contentReducer';
+import testCrud from './testCrudReducer';
+import state from './stateReducer';
 
 export default combineReducers({
-  state,
   content,
+  testCrud,
+  state,
 });

@@ -1,6 +1,7 @@
 const { join } = require('path');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const BabiliPlugin = require('babili-webpack-plugin');
 const ExtractText = require('extract-text-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const OfflinePlugin = require('offline-plugin');
@@ -41,7 +42,9 @@ module.exports = isProd => {
 
 	if (isProd) {
 		plugins.push(
-			new webpack.LoaderOptionsPlugin({ minimize: true, debug: true }),
+			new webpack.LoaderOptionsPlugin({
+				minimize: true,
+			}),
 			new ImageminPlugin({
 				test: /\.(jpe?g|png|gif|svg)$/i,
 		    optipng: {
@@ -65,21 +68,15 @@ module.exports = isProd => {
 		    },
 	    }),
 			new webpack.optimize.UglifyJsPlugin({
-				output: {
-					comments: 0
-				},
-				compress: {
-					unused: 1,
-					warnings: 0,
-					comparisons: 1,
-					conditionals: 1,
-					negate_iife: 0, // <- for `LazyParseWebpackPlugin()`
-					dead_code: 1,
-					if_return: 1,
-					join_vars: 1,
-					evaluate: 1
-				}
+		    compress: {
+		      warnings: true,
+		    },
+		    output: {
+		      comments: false,
+		    },
+		    sourceMap: false,
 			}),
+			new BabiliPlugin(),
 			new ExtractText('main.[hash].css'),
 			new OfflinePlugin({
 	      safeToUseOptionalCaches: true,

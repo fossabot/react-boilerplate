@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
-import initReactFastclick from 'react-fastclick';
+// import { whyDidYouUpdate } from 'why-did-you-update';
 import store from './store';
 import App from './containers';
 import './styles/main.scss';
 
-// fast-click
-initReactFastclick();
+// why did you update
+// whyDidYouUpdate(React);
 
 // offline-plugin
 OfflinePluginRuntime.install({

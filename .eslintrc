@@ -17,6 +17,7 @@
   ],
   "rules": {
     "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".js"] }],
+    "react/forbid-prop-types": "off",
     "jsx-a11y/href-no-hash": "off",
     "valid-jsdoc": [2, {
       "requireParamDescription": false,

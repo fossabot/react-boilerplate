@@ -1,5 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-const TestComponent = () => <div>I am the component</div>;
+class TestComponent extends Component {
+  static propTypes = {
+    testCrud: PropTypes.array.isRequired,
+  };
 
-export default TestComponent;
+  static defaultProps = {
+    testCrud: [],
+  }
+
+  render() {
+    return (
+      <div>I am the component</div>
+    );
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    testCrud: state.testCrud,
+  };
+}
+
+export default connect(mapStateToProps)(TestComponent);
