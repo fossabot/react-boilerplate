@@ -1,17 +1,17 @@
 {
   "name": "webpack-react",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "A boilerplate for getting up and running with React",
+  "author": "Jon Gunnison",
   "keywords": [],
-  "license": "",
-  "homepage": "https://github.com/repo-name",
+  "license": "MIT",
+  "homepage": "https://github.com/jgunnison/react-boilerplate",
   "bugs": {
-    "url": "https://github.com/repo-name"
+    "url": "https://github.com/jgunnison/react-boilerplate"
   },
   "main": "index.js",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=6"
   },
   "scripts": {
     "jest": "./node_modules/jest-cli/bin/jest.js --watch",
@@ -72,6 +72,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
+    "identity-obj-proxy": "^3.0.0",
     "imagemin-webpack-plugin": "^1.5.0-beta.0",
     "jest": "^20.0.4",
     "node-sass": "^4.5.3",
@@ -90,5 +91,11 @@
   },
   "peerDependencies": {
     "babel-cli": "^6.24.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy",
+      "^.+\\.(gif|ttf|eot|svg|woff|woff2|ico)$": "<rootDir>/tools/fileMock.js"
+    }
   }
 }
