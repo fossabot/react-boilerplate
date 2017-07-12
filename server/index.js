@@ -45,7 +45,7 @@ app.use(expressValidator());
 /**
  * Primary app routes.
  */
-app.get('/custom', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(client + '/index.html');
 });
 
