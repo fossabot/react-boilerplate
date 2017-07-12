@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { fetchData } from '../actions';
+import List from './list';
 
 class TestComponent extends Component {
   static propTypes = {
+    fetchData: PropTypes.func.isRequired,
     testCrud: PropTypes.array.isRequired,
   };
 
@@ -11,9 +14,13 @@ class TestComponent extends Component {
     testCrud: [],
   }
 
+  componentDidMount() {
+    this.props.fetchData();
+  }
+
   render() {
     return (
-      <div>I am the component</div>
+      <List data={this.props.testCrud} />
     );
   }
 }
@@ -24,4 +31,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(TestComponent);
+export default connect(mapStateToProps, { fetchData })(TestComponent);
