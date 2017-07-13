@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchData } from '../actions';
 import List from './list';
 
-class TestComponent extends Component {
+class CrudList extends Component {
   static propTypes = {
     fetchData: PropTypes.func.isRequired,
     testCrud: PropTypes.array.isRequired,
@@ -31,4 +31,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { fetchData })(TestComponent);
+export default connect(mapStateToProps, { fetchData })(CrudList);

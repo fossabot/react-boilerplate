@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import TestComponent from '../components/testComponent';
+import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
+import NewCrudItem from '../components/newCrudItem';
+import CrudList from '../components/crudList';
 
 class App extends Component {
   static propTypes = {
@@ -27,13 +28,13 @@ class App extends Component {
         <div>
           <img src="static/img/doge.png" alt="favicon for site" />
           <ul className="c-nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/new">New</Link></li>
-            <li><Link to="/component">Component</Link></li>
+            <li><NavLink activeClassName="active" exact to="/">Home</NavLink></li>
+            <li><NavLink activeClassName="active" exact to="/list">List</NavLink></li>
+            <li><NavLink activeClassName="active" exact to="/new">New</NavLink></li>
           </ul>
           <Route path="/" exact render={() => (<div>{this.props.content}</div>)} />
-          <Route path="/new" render={() => (<div>This is New</div>)} />
-          <Route path="/component" component={TestComponent} />
+          <Route path="/list" component={CrudList} />
+          <Route path="/new" component={NewCrudItem} />
         </div>
       </Router>
     );
