@@ -28,7 +28,8 @@ class NewCrudItem extends Component {
   }
 
   handleChange(e) {
-    if (!this.state.errors[e.target.name]) {
+    const currentTarget = !!this.state.errors[e.target.name];
+    if (currentTarget) {
       const errors = Object.assign({}, this.state.errors);
       delete errors[e.target.name];
       this.setState({
