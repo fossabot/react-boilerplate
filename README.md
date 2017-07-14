@@ -28,9 +28,9 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 
 ## Tools
 
-### IDE
-- [Webstorm](https://www.jetbrains.com/webstorm/) (for large projects)
-- [VS Code](https://code.visualstudio.com/) (for basic projects)
+### Writing Tools
+- [Webstorm](https://www.jetbrains.com/webstorm/) (Integrated Development Environment)
+- [VS Code](https://code.visualstudio.com/) (Lightweight Desktop Editor)
 
 ### Chrome Extensions
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
