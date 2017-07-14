@@ -32,12 +32,38 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 - [Webstorm](https://www.jetbrains.com/webstorm/) (Integrated Development Environment)
 - [VS Code](https://code.visualstudio.com/) (Lightweight Desktop Editor)
 
-### Chrome Extensions
-- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
-- [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
+### Git GUI
+- [GitKraken](https://www.gitkraken.com/)
 
 ### Fish Shell
 1. Download at [fishshell.com/](https://fishshell.com/) and install.
 1. Then install oh-my-fish with curl `curl -L https://get.oh-my.fish | fish`.
 1. Finally set your theme in a new terminal window with `omf install toaster` and then the command `omf theme toaster`.
+
+### Node version management
+- [n](https://github.com/tj/n)
+
+### Dependency Management
+- [Yarn](https://yarnpkg.com/en/)
+
+### Docker
+- [Docker CE](https://www.docker.com/community-edition)
+- [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
+
+### Image Optimization
+- [ImageOptim for OS X](https://imageoptim.com/mac)
+- [svgo](https://github.com/svg/svgo)
+
+### Chrome Extensions
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+- [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
+
+## Integrations/Services
+
+### Backends
+- [Graph.cool - GraphQL Database](https://www.graph.cool/)
+- [prismic.io - CMS](https://prismic.io/)
+
+### Video Hosting
+- [Vimeo](https://vimeo.com/)
