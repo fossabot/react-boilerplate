@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * Module dependencies.
  */
@@ -16,7 +14,7 @@ const expressStatusMonitor = require('express-status-monitor');
 /**
  * Setting path to client files.
  */
-const client = path.join(__dirname, "../client");
+const client = path.join(__dirname, '../client');
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -45,7 +43,7 @@ app.use(expressValidator());
  * Primary app routes.
  */
 app.get('*', (req, res) => {
-  res.sendFile(`${client} + /index.html`);
+  res.sendFile(client + '/index.html');
 });
 
 /**
