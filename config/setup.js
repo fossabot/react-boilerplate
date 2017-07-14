@@ -20,7 +20,7 @@ module.exports = isProd => {
     new CaseSensitivePathsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(isProd ? 'production' : 'development'),
+      'process.env.NODE_ENV': JSON.stringify(isProd ? 'production' : 'development')
     }),
     new HTML({ template: 'client-src/index.html' }),
     new StyleLintPlugin({
@@ -28,16 +28,16 @@ module.exports = isProd => {
         configFile: '../',
         quiet: false,
         ignorePath: 'node_modules',
-        syntax: 'scss',
-      },
+        syntax: 'scss'
+      }
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
-          require('autoprefixer')({ browsers: ['last 2 version', 'not ie <= 10'] }),
-        ],
-      },
-    }),
+          require('autoprefixer')({ browsers: ['last 2 version', 'not ie <= 10'] })
+        ]
+      }
+    })
   ];
 
   if (isProd) {
@@ -83,7 +83,7 @@ module.exports = isProd => {
         responseStrategy: 'cache-first',
         excludes: ['**/*.map'],
         externals: [
-          '/',
+          '/'
         ],
         ServiceWorker: {
           events: true,
@@ -91,14 +91,14 @@ module.exports = isProd => {
         },
         AppCache: {
           events: true,
-        },
-      }),
+        }
+      })
     );
   } else {
     // dev only
     plugins.push(
       new webpack.HotModuleReplacementPlugin(),
-      new webpack.NamedModulesPlugin(),
+      new webpack.NamedModulesPlugin()
     );
   }
 
