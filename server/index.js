@@ -33,10 +33,9 @@ const app = express();
  * Express configuration.
  */
 app.set('port', process.env.PORT || 8080);
+app.use(compression({ threshold: 0 }));
 app.use('/', express.static(client));
-app.use(express.static(client));
 app.use(expressStatusMonitor());
-app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -46,7 +45,7 @@ app.use(expressValidator());
  * Primary app routes.
  */
 app.get('*', (req, res) => {
-  res.sendFile(client + '/index.html');
+  res.sendFile(`${client} + /index.html`);
 });
 
 /**
