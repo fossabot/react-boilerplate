@@ -10,6 +10,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const expressValidator = require('express-validator');
 const expressStatusMonitor = require('express-status-monitor');
+const helmet = require('helmet');
 
 /**
  * Setting path to client files.
@@ -33,11 +34,12 @@ const app = express();
 app.set('port', process.env.PORT || 8080);
 app.use(compression({ threshold: 0 }));
 app.use('/', express.static(client));
-app.use(expressStatusMonitor());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
+app.use(expressStatusMonitor());
+app.use(helmet());
 
 /**
  * Primary app routes.
