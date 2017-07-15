@@ -4,11 +4,11 @@
   	"transform-react-jsx",
     "lodash"
   ],
-	presets: [
+	"presets": [
 		[
 			"es2015", {
-				loose: true,
-				modules: false
+				"loose": true,
+				"modules": false
 			}
 		],
 		[
