@@ -34,7 +34,7 @@ const app = express();
 app.set('port', process.env.PORT || 8080);
 app.use(helmet());
 app.use(compression({ threshold: 0 }));
-app.use('/', express.static(client));
+app.use('/', express.static(client, { maxAge: 31557600 }));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
