@@ -1,8 +1,8 @@
 {
   "plugins": [
-  	"transform-class-properties",
-  	"transform-react-jsx",
     "lodash",
+    "transform-react-jsx",
+    "transform-class-properties",
     "transform-flow-strip-types"
   ],
 	"presets": [
@@ -18,7 +18,13 @@
 	      "modules": false,
 	      "targets": {
 	        "browsers": ["last 2 versions", "not ie 10"]
-	      }
+	      },
+        "production": {
+          "plugins": [
+            "transform-react-constant-elements",
+            "transform-react-remove-prop-types"
+          ]
+        }
 	    }
     ],
     "airbnb",
