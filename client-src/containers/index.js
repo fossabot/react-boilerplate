@@ -20,7 +20,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      value: 'Hello; World',
+      value: 'Such Wow!',
     };
   }
 
@@ -37,13 +37,13 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <img src="static/img/doge.png" alt="favicon for site" />
+          <img src="static/img/logo.svg" alt="favicon for site" />
           <ul className="c-nav">
             <li><NavLink activeClassName="active" exact to="/">Home</NavLink></li>
             <li><NavLink activeClassName="active" exact to="/list">List</NavLink></li>
             <li><NavLink activeClassName="active" exact to="/new">New</NavLink></li>
           </ul>
-          <Route path="/" exact render={() => (<div>{this.props.content}</div>)} />
+          <Route path="/" exact render={() => (<div><img src="static/img/doge.png" alt="Doge" /><p>{this.props.content}</p></div>)} />
           <Route path="/list" component={CrudList} />
           <Route path="/new" component={NewCrudItem} />
         </div>
