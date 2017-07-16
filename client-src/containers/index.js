@@ -1,3 +1,5 @@
+/* @flow */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -12,7 +14,7 @@ class App extends Component {
 
   static defaultProps = {
     content: '',
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -21,6 +23,15 @@ class App extends Component {
       value: 'Hello; World',
     };
   }
+
+  // Flow types
+  state: {
+    value: string,
+  };
+
+  props: {
+    content: string,
+  };
 
   render() {
     return (
