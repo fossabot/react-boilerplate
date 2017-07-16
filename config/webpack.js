@@ -4,19 +4,33 @@ const ExtractText = require('extract-text-webpack-plugin');
 const setup = require('./setup');
 
 const client = join(__dirname, '../client');
-const excludeExternals = /(node_modules)/;
+const excludeExternals = /node_modules/;
 
 module.exports = (env) => {
   const isProd = env && env.production;
 
+  const addHotEntries = () => {
+    const entriesObj = ['./client-src/index.js', './client-src/styles/core.scss', './client-src/styles/styles.scss'];
+    if (!isProd) {
+      entriesObj.unshift('react-hot-loader/patch', 'webpack-dev-server/client?http://0.0.0.0:3000', 'webpack/hot/only-dev-server');
+    }
+    return entriesObj;
+  };
+
   return {
     entry: {
-      app: ['./client-src/index.js', './client-src/styles/core.scss', './client-src/styles/styles.scss'],
-      vendor: [
-        // pull these to a `vendor.js` file
-        'react', 'react-dom',
-      ],
+      app: addHotEntries(),
+      vendor: ['react', 'react-dom'],
     },
+    devServer: {
+      contentBase: client,
+      port: process.env.PORT || 3000,
+      historyApiFallback: true,
+      compress: isProd,
+      inline: !isProd,
+      hot: !isProd,
+    },
+    devtool: !isProd && 'source-map',
     output: {
       path: client,
       filename: '[name].[hash].js',
@@ -56,14 +70,5 @@ module.exports = (env) => {
       ],
     },
     plugins: setup(isProd),
-    devtool: !isProd && 'source-map',
-    devServer: {
-      contentBase: client,
-      port: process.env.PORT || 3000,
-      historyApiFallback: true,
-      compress: isProd,
-      inline: !isProd,
-      hot: !isProd,
-    },
   };
 };

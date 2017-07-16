@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import store from './store';
@@ -12,6 +13,22 @@ import App from './containers';
 
 //   whyDidYouUpdate(React);
 // }
+
+// render app
+const rootEl = document.getElementById('root');
+const renderApp = (Component) => {
+  render(
+    <AppContainer>
+      <Provider store={store}>
+        <Component />
+      </Provider>
+    </AppContainer>,
+    rootEl,
+  );
+};
+
+renderApp(App);
+if (module.hot) module.hot.accept(() => renderApp(App));
 
 // offline-plugin
 OfflinePluginRuntime.install({
@@ -32,11 +49,6 @@ OfflinePluginRuntime.install({
     console.log('SW Event:', 'onUpdateFailed');
   },
 });
-
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>, document.getElementById('root'));
 
 /* eslint-disable */
 if (process.env.NODE_ENV === 'production') {
