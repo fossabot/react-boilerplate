@@ -12,6 +12,8 @@ module.exports = (env) => {
   return {
     entry: {
       app: './client-src/index.js',
+      core: './client-src/styles/core.scss',
+      styles: './client-src/styles/styles.scss',
       vendor: [
         // pull these to a `vendor.js` file
         'react', 'react-dom',

@@ -77,7 +77,7 @@ module.exports = isProd => {
         sourceMap: false,
       }),
       new BabiliPlugin(),
-      new ExtractText('main.[hash].css'),
+      new ExtractText('[name].[hash].css'),
       new OfflinePlugin({
         safeToUseOptionalCaches: true,
         responseStrategy: 'cache-first',

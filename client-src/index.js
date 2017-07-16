@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import store from './store';
 import App from './containers';
-import './styles/main.scss';
 
 // if (process.env.NODE_ENV !== 'production') {
 //   /* eslint-disable */
