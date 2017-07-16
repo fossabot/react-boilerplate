@@ -27,7 +27,7 @@
     "build": "webpack -p --env.production --config config/webpack",
     "start": "webpack-dev-server --config config/webpack",
     "dev": "nodemon server/index.js",
-    "server": "node server/index.js"
+    "server": "set NODE_ENV=production && node server/index.js"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -110,9 +110,26 @@
     "babel-cli": "^6.24.1"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "client-src/**/*.{js}",
+      "!app/**/*.test.{js}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 98,
+        "branches": 91,
+        "functions": 98,
+        "lines": 98
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "client-src"
+    ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "identity-obj-proxy",
       "^.+\\.(gif|ttf|eot|svg|woff|woff2|ico)$": "<rootDir>/tools/fileMock.js"
-    }
+    },
+    "testRegex": ".*\\.test\\.js$"
   }
 }

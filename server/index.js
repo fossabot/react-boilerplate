@@ -32,10 +32,13 @@ const app = express();
  * Express configuration.
  */
 app.set('port', process.env.PORT || 8080);
+app.set('view cache', true);
 app.use(helmet());
 app.use(compression({ threshold: 0 }));
 app.use('/', express.static(client, { maxAge: 31557600 }));
-app.use(logger('dev'));
+if (app.get('env') !== 'production') {
+  app.use(logger('dev'));
+}
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
