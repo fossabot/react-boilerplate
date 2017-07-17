@@ -1,7 +1,5 @@
 export default function () {
-  return {
-    state: [
-      { isActive: false },
-    ],
-  };
+  return [
+    { isActive: false },
+  ];
 }
