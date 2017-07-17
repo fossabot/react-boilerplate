@@ -25,6 +25,7 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 * **Install C++ Compiler**. Browser-sync requires a C++ compiler on Windows. [Visual Studio Express](https://www.visualstudio.com/en-US/products/visual-studio-express-vs) comes bundled with a free C++ compiler. Or, if you already have Visual Studio installed: Open Visual Studio and go to File -> New -> Project -> Visual C++ -> Install Visual C++ Tools for Windows Desktop. The C++ compiler is used to compile browser-sync (and perhaps other Node modules).
 
 ## To Do
+- [ ] Update Docker to NGINX and not Node.js
 - [ ] Get fix for `why-did-you-update` from [this issue](https://github.com/garbles/why-did-you-update/issues/45).
 - [ ] Add `preload-webpack-plugin` once [this issue](https://github.com/GoogleChrome/preload-webpack-plugin/issues/27) is fixed.
 - [ ] Add [prepack-webpack-plugin](https://github.com/gajus/prepack-webpack-plugin) when available for Webpack 3.x.
