@@ -15,7 +15,7 @@ const helmet = require('helmet');
 /**
  * Setting path to client files.
  */
-const client = path.join(__dirname, '../client');
+const client = path.join(__dirname, './client');
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
