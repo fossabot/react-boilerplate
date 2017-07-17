@@ -1,27 +1,12 @@
-/**
- * Module dependencies.
- */
 const express = require('express');
 const compression = require('compression');
-const bodyParser = require('body-parser');
 const logger = require('morgan');
-const errorHandler = require('errorhandler');
-const dotenv = require('dotenv');
 const path = require('path');
-const expressValidator = require('express-validator');
-const expressStatusMonitor = require('express-status-monitor');
-const helmet = require('helmet');
 
 /**
  * Setting path to client files.
  */
 const client = path.join(__dirname, './client');
-
-/**
- * Load environment variables from .env file, where API keys and passwords are configured.
- * Use the values like this `process.env.SOME_URI`.
- */
-dotenv.load({ path: '../.env.example' });
 
 /**
  * Create Express server.
@@ -33,16 +18,11 @@ const app = express();
  */
 app.set('port', process.env.PORT || 8080);
 app.set('view cache', true);
-app.use(helmet());
 app.use(compression({ threshold: 0 }));
 app.use('/', express.static(client, { maxAge: 31557600 }));
 if (app.get('env') !== 'production') {
   app.use(logger('dev'));
 }
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressValidator());
-app.use(expressStatusMonitor());
 
 /**
  * Primary app routes.
@@ -50,11 +30,6 @@ app.use(expressStatusMonitor());
 app.get('*', (req, res) => {
   res.sendFile(client + '/index.html');
 });
-
-/**
- * Error Handler.
- */
-app.use(errorHandler());
 
 /**
  * Start Express server.
