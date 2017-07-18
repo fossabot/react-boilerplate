@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
-import NewCrudItem from '../components/newCrudItem';
-import CrudList from '../components/crudList';
+import NewCrudItem from './components/newCrudItem';
+import CrudList from './components/crudList';
 
 class App extends Component {
   static propTypes = {

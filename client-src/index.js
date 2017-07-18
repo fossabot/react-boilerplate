@@ -4,7 +4,7 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import store from './store';
-import App from './containers';
+import App from './app';
 
 // if (process.env.NODE_ENV !== 'production') {
 //   /* eslint-disable */
