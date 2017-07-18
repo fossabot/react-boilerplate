@@ -25,7 +25,6 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 * **Install C++ Compiler**. Browser-sync requires a C++ compiler on Windows. [Visual Studio Express](https://www.visualstudio.com/en-US/products/visual-studio-express-vs) comes bundled with a free C++ compiler. Or, if you already have Visual Studio installed: Open Visual Studio and go to File -> New -> Project -> Visual C++ -> Install Visual C++ Tools for Windows Desktop. The C++ compiler is used to compile browser-sync (and perhaps other Node modules).
 
 ## To Do
-- [ ] Update Docker to NGINX and not Node.js
 - [ ] Get fix for `why-did-you-update` from [this issue](https://github.com/garbles/why-did-you-update/issues/45).
 - [ ] Add `preload-webpack-plugin` once [this issue](https://github.com/GoogleChrome/preload-webpack-plugin/issues/27) is fixed.
 - [ ] Add [prepack-webpack-plugin](https://github.com/gajus/prepack-webpack-plugin) when available for Webpack 3.x.
@@ -97,9 +96,22 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 
 ## Integrations/Services
 
-### Backends
-- [Graph.cool - GraphQL Database](https://www.graph.cool/)
-- [prismic.io - CMS](https://prismic.io/)
+### Static Hosting
+- [Netlify](https://www.netlify.com) ($9/month)
+- [Surge](http://surge.sh/) ($13/month)
+
+### Cloud Hosting (not necessary)
+- [Amazon EC2](https://aws.amazon.com/ec2) (pay as you go)
+- [DigitalOcean](https://www.digitalocean.com) ($5 - $10/month)
+
+### Continuous Integration/Deployment Services
+- [Travis CI - CI/CD](https://travis-ci.com/) ($69 - $129/month)
+- [Buddy Works - CI/CD](https://buddy.works) ($49 - $99/month)
+- [DeployBot - CD](https://deploybot.com/) ($15 - $25/month)
+
+### Recommended Backends
+- [Graph.cool - GraphQL Database](https://www.graph.cool/) ($9/month)
+- [Prismic.io - CMS](https://prismic.io/) ($7 - $15/month)
 
 ### Video Hosting
-- [Vimeo](https://vimeo.com/)
+- [Vimeo](https://vimeo.com/) ($7/month)
