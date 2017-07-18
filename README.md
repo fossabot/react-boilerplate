@@ -2,6 +2,15 @@
 
 This is a React boilerplate with a bunch of features including linting for Sass/SCSS and ECMAScript with AirBnB's rules, Webpack Bundling and Minification, Jest Testing, PWA service worker generating, Offline packages with Yarn, and a Node server with Express for hosting.
 
+[![React](/internals/img/react.png)](https://facebook.github.io/react/)
+[![Webpack](/internals/img/webpack.png)](https://webpack.github.io/)
+[![Redux](/internals/img/redux.png)](http://redux.js.org/)
+[![React Router](/internals/img/react-router.png)](https://github.com/ReactTraining/react-router)
+[![Flow](/internals/img/flow.png)](https://flowtype.org/)
+[![ESLint](/internals/img/eslint.png)](http://eslint.org/)
+[![Jest](/internals/img/jest.png)](https://facebook.github.io/jest/)
+[![Yarn](/internals/img/yarn.png)](https://yarnpkg.com/)
+
 ## Quick Start
 1. Clone the Repo.
 1. Navigate to the repo directory and install packages with `yarn`.
@@ -40,7 +49,7 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 | [Webpack](http://webpack.github.io) | Bundles npm packages and our JS into a single file. Includes hot reloading via [react-transform-hmr](https://www.npmjs.com/package/react-transform-hmr). | [Quick Webpack How-to](https://github.com/petehunt/webpack-howto) [Pluralsight Course](https://www.pluralsight.com/courses/webpack-fundamentals)|
 | [Jest](https://facebook.github.io/jest/) | Automated tests with built-in expect assertions and [Enzyme](https://github.com/airbnb/enzyme) for DOM testing without a browser using Node. | [Pluralsight Course](https://www.pluralsight.com/courses/testing-javascript) |
 | [ESLint](http://eslint.org/)| Lint JS. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React specific linting rules. | |
-| [Flow](https://flow.org/)| Static type checker for Javascript | |
+| [Flow](https://flow.org/)| Static type checker for Javascript | This project comes with Flow support out of the box! You can annotate your code with types, [get Flow errors as ESLint errors](https://github.com/amilajack/eslint-plugin-flowtype-errors), and get [type errors during runtime](https://github.com/codemix/flow-runtime) during development. Types are completely optional.|
 | [SASS](http://sass-lang.com/) | Compiled CSS styles with variables, functions, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
 | [PostCSS](https://github.com/postcss/postcss) | Transform styles with JS plugins. Used to autoprefix CSS |
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | [IDE Plugins](http://editorconfig.org/#download) |
