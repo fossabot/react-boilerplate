@@ -95,7 +95,7 @@
     "stylelint-no-browser-hacks": "^1.0.2",
     "stylelint-no-unsupported-browser-features": "^1.0.0",
     "stylelint-scss": "^1.5.1",
-    "stylelint-webpack-plugin": "^0.8.0",
+    "stylelint-webpack-plugin": "^0.9.0",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1"
   },
