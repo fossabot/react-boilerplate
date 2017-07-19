@@ -6,23 +6,25 @@ const ExtractText = require('extract-text-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const OfflinePlugin = require('offline-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const Clean = require('clean-webpack-plugin');
-const Copy = require('copy-webpack-plugin');
-const HTML = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const root = join(__dirname, '..');
 
 module.exports = isProd => {
   // base plugins array
   const plugins = [
-    new Clean(['client'], { root }),
-    new Copy([{ context: 'client-src/static/', from: '**/*.*', to: 'static' }]),
+    new CleanWebpackPlugin(['client'], { root }),
+    new CopyWebpackPlugin([{ context: 'client-src/static/', from: '**/*.*', to: 'static' }]),
     new CaseSensitivePathsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(isProd ? 'production' : 'development')
     }),
-    new HTML({ template: 'client-src/index.html' }),
+    new HtmlWebpackPlugin({
+      template: 'client-src/index.html'
+    }),
     new StyleLintPlugin({
       options: {
         configFile: '../',

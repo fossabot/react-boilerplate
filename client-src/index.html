@@ -25,6 +25,10 @@
     <meta name="msapplication-TileColor" content="#F2F2F2">
 
     <meta name="theme-color" content="#5856d6">
+
+    <% for (var index in htmlWebpackPlugin.files.js) { %>
+    <link rel="preload" href="<%= htmlWebpackPlugin.files.js[index] %>" as="script">
+    <% } %>
   </head>
   <body>
     <div id="root">Loading</div>
