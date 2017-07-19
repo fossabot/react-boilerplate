@@ -6,13 +6,19 @@ import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import store from './store';
 import App from './app';
 
-// if (process.env.NODE_ENV !== 'production') {
-//   /* eslint-disable */
-//   const { whyDidYouUpdate } = require('why-did-you-update');
-//   /* eslint-disable */
+if (process.env.NODE_ENV !== 'production') {
+  /* eslint-disable */
+  let createClass = React.createClass;
+  Object.defineProperty(React, 'createClass', {
+    set: (nextCreateClass) => {
+      createClass = nextCreateClass;
+    },
+  });
+  const { whyDidYouUpdate } = require('why-did-you-update');
+  /* eslint-disable */
 
-//   whyDidYouUpdate(React);
-// }
+  whyDidYouUpdate(React);
+}
 
 // render app
 const rootEl = document.getElementById('root');
