@@ -46,6 +46,7 @@ class App extends Component {
           <Route path="/" exact render={() => (<div><img src="static/img/doge.png" alt="Doge" /><p>{this.props.content}</p></div>)} />
           <Route path="/list" component={CrudList} />
           <Route path="/new" component={NewCrudItem} />
+          <Route render={() => (<p>This page does not exist</p>)} />
         </div>
       </Router>
     );
