@@ -52,6 +52,7 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 | [Flow](https://flow.org/)| Static type checker for Javascript | This project comes with Flow support out of the box! You can annotate your code with types, [get Flow errors as ESLint errors](https://github.com/amilajack/eslint-plugin-flowtype-errors), and get [type errors during runtime](https://github.com/codemix/flow-runtime) during development. Types are completely optional.|
 | [SASS](http://sass-lang.com/) | Compiled CSS styles with variables, functions, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
 | [PostCSS](https://github.com/postcss/postcss) | Transform styles with JS plugins. Used to autoprefix CSS |
+| [BackstopJS](https://github.com/garris/BackstopJS)| Automated visual regression testing | A simple visual regression tool that will help you catch mistakes or unwanted changes all of the documentation can be found at the Github link.|
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | [IDE Plugins](http://editorconfig.org/#download) |
 
 ## Visual Regression Testing
