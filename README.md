@@ -34,6 +34,7 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 * **Install C++ Compiler**. Browser-sync requires a C++ compiler on Windows. [Visual Studio Express](https://www.visualstudio.com/en-US/products/visual-studio-express-vs) comes bundled with a free C++ compiler. Or, if you already have Visual Studio installed: Open Visual Studio and go to File -> New -> Project -> Visual C++ -> Install Visual C++ Tools for Windows Desktop. The C++ compiler is used to compile browser-sync (and perhaps other Node modules).
 
 ## To Do
+- [ ] Remove `loglevel` from DevDependencies once `webpack-dev-server` resolves their missing dependency.
 - [ ] Upgrade `why-did-you-update` to remove setter and resolve [this issue](https://github.com/garbles/why-did-you-update/issues/45).
 - [ ] Add [prepack-webpack-plugin](https://github.com/gajus/prepack-webpack-plugin) when available for Webpack 3.x.
 
@@ -52,6 +53,13 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 | [SASS](http://sass-lang.com/) | Compiled CSS styles with variables, functions, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
 | [PostCSS](https://github.com/postcss/postcss) | Transform styles with JS plugins. Used to autoprefix CSS |
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | [IDE Plugins](http://editorconfig.org/#download) |
+
+## Visual Regression Testing
+1. Build the `client` directory with `yarn build`.
+1. Start the server on port `8080` with the command `yarn server`.
+1. Collect the base images with `yarn init-visual`.
+1. After completing your changes build the `client` directory and serve the Node server with the commands in steps 1 & 2.
+1. Finally run the test with `yarn test-visual`.
 
 ## Docker
 
