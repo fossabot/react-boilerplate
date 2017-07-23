@@ -1,5 +1,5 @@
 module.exports = function (name) { return (`import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 import ${name} from './';
 
 describe('Component: ${name}', () => {
