@@ -54,17 +54,34 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 | [BackstopJS](https://github.com/garris/BackstopJS)| Automated visual regression testing |
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | 
 
+## Package.json Scripts
+| **Script** | **Description** |
+|----------|-------|
+| flow | Runs the static type checking across the files that specify `/* @flow */` in the `client-src` directory. |
+| jest | Runs Jest testing with the `--watch` flag for testing while developing. |
+| test | Runs the Jest testing and outputs a code coverage report. |
+| visual:init | Initializes BackstopJS's reference images for visual regression testing. |
+| visual:test | Tests the BackstopJS reference images against the current server and reports differences. |
+| scaffold:pure | Generates a Pure/Functional component template in the `client-src/components/` directory. |
+| scaffold:class | Generates a Stateful/Smart component template in the `client-src/components/` directory. |
+| stats | Builds the project and generates a `stats.json` file in the main directory to be review through [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/). |
+| prebuild | Runs the `test` script before building the `client-src` directory with Webpack. |
+| build | Builds the `client-src` directory for production with Webpack. |
+| start | Starts the `webpack-dev-server` at port `3000` with HMR (hot modules replacement) for development. |
+| server | Starts the `server.js` to host the `client` directory at port `8080` (be sure to run `build` first). |
+
+
 ## Creating Components
-Just use one of the following commands. `yarn gen-class` for a Stateful/Smart component or `yarn gen-pure` for a Pure/Functional component. These commands will create components under the directory `client-src/components/` with everything you need to start coding.
+Just use one of the following commands. `yarn scaffold:class` for a Stateful/Smart component or `yarn scaffold:pure` for a Pure/Functional component. These commands will create components under the directory `client-src/components/` with everything you need to start coding.
 
 A caveat to this is that you'll still need to import the Sass/SCSS manually in the `client-src/styles/styles.scss` file. But this allows you to manage the specificity of the component which will help in the long run.
 
 ## Visual Regression Testing
 1. Build the `client` directory with `yarn build`.
 1. Start the server on port `8080` with the command `yarn server`.
-1. Collect the base images with `yarn init-visual`.
+1. Collect the base images with `yarn visual:init`.
 1. After completing your changes build the `client` directory and serve the Node server with the commands in steps 1 & 2.
-1. Finally run the test with `yarn test-visual`.
+1. Finally run the test with `yarn visual:test`.
 
 ## Docker
 
