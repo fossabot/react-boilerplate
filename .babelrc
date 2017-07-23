@@ -25,6 +25,9 @@
             "transform-react-constant-elements",
             "transform-react-remove-prop-types"
           ]
+        },
+        "test": {
+          "presets": ["env"]
         }
 	    }
     ],
