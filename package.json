@@ -24,8 +24,8 @@
     "test": "./node_modules/jest-cli/bin/jest.js --coverage",
     "init-visual": "backstop reference",
     "test-visual": "backstop test",
-    "gen-pure": "node ./scaffold/createPure.js",
-    "gen-class": "node ./scaffold/createClass.js",
+    "gen-pure": "node ./internals/scaffold/createPure.js",
+    "gen-class": "node ./internals/scaffold/createClass.js",
     "stats": "webpack -p --env.production --config config/webpack --json > stats.json",
     "prebuild": "npm run test",
     "build": "webpack -p --env.production --config config/webpack",
@@ -114,7 +114,7 @@
   "jest": {
     "collectCoverageFrom": [
       "client-src/**/*.{js}",
-      "!app/**/*.test.{js}"
+      "!client-src/**/*.test.{js}"
     ],
     "coverageThreshold": {
       "global": {
@@ -129,9 +129,10 @@
       "client-src"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss)$": "identity-obj-proxy",
-      "^.+\\.(gif|ttf|eot|svg|woff|woff2|ico)$": "<rootDir>/internals/mocks/fileMock.js"
+      "\\.(css|less|styl|scss|sass)$": "identity-obj-proxy",
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$": "<rootDir>/internals/mocks/fileMock.js"
     },
+    "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/testBundler.js",
     "testRegex": ".*\\.test\\.js$"
   }
 }
