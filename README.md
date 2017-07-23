@@ -55,9 +55,9 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | 
 
 ## Creating Components
-Use one of the following commands `yarn gen-class` for a Stateful/Smart component or `yarn gen-pure` for a Pure/Functional component. These will create components under the directory `client-src/components/` with everything you need to start coding.
+Just use one of the following commands. `yarn gen-class` for a Stateful/Smart component or `yarn gen-pure` for a Pure/Functional component. These commands will create components under the directory `client-src/components/` with everything you need to start coding.
 
-A caveat is that you'll still need to import the Sass/SCSS manually in the `client-src/styles/styles.scss` file though before everything is setup. This allows you to manage your specificity of the component thought which will help in the long run.
+A caveat to this is that you'll still need to import the Sass/SCSS manually in the `client-src/styles/styles.scss` file. But this allows you to manage the specificity of the component which will help in the long run.
 
 ## Visual Regression Testing
 1. Build the `client` directory with `yarn build`.
