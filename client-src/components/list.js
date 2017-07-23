@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const ListRequiredProps = {
-  data: PropTypes.array.isRequired,
-};
+import DataItem from './dataItem';
 
 function List({ data }) {
   const emptyMessage = (
@@ -11,7 +8,9 @@ function List({ data }) {
   );
 
   const crudList = (
-    <p>List of CRUD</p>
+    <div className="list">
+      { data.map(item => <DataItem item={item} key={Math.random()} />) }
+    </div>
   );
 
   return (
@@ -21,6 +20,8 @@ function List({ data }) {
   );
 }
 
-List.propTypes = ListRequiredProps;
+List.propTypes = {
+  data: PropTypes.array.isRequired,
+};
 
 export default List;

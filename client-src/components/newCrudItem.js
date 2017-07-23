@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchData } from '../actions';
+import { saveData } from '../actions';
 
 class NewCrudItem extends Component {
   static propTypes = {
-    fetchData: PropTypes.func.isRequired,
+    saveData: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -20,11 +21,9 @@ class NewCrudItem extends Component {
       surname: '',
       region: '',
       errors: {},
+      loading: false,
+      done: false,
     };
-  }
-
-  componentDidMount() {
-    this.props.fetchData();
   }
 
   handleChange(e) {
@@ -50,13 +49,25 @@ class NewCrudItem extends Component {
     if (this.state.name === '') errors.name = 'cannot be empty';
     if (this.state.surname === '') errors.surname = 'cannot be empty';
     if (this.state.region === '') errors.region = 'cannot be empty';
-
     this.setState({ errors });
+    const isValid = Object.keys(errors).length === 0;
+
+    if (isValid) {
+      const { name, surname, region } = this.state;
+      this.setState({ loading: true });
+      this.props.saveData({ name, surname, region }).then(
+        () => { this.setState({ done: true }); },
+      );
+    }
   }
 
   render() {
+    if (this.state.done) {
+      return <Redirect to="/list" />;
+    }
+
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={classnames('form', { loading: this.state.loading })} onSubmit={this.handleSubmit}>
         <h1>Add New CRUD Item</h1>
         <div className={classnames('field', { error: !!this.state.errors.name })}>
           <label htmlFor="name">Name
@@ -82,10 +93,4 @@ class NewCrudItem extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    testCrud: state.testCrud,
-  };
-}
-
-export default connect(mapStateToProps, { fetchData })(NewCrudItem);
+export default connect(null, { saveData })(NewCrudItem);
