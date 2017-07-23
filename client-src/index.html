@@ -7,6 +7,9 @@
     <meta name="keywords" content="Keywords (, seperated)" />
     <meta name="author" content="Name" />
     <meta name="mobile-web-app-capable" content="yes">
+    <% if (htmlWebpackPlugin.options.env.production) { %>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.google-analytics.com/analytics.js; font-src 'self' https://fonts.gstatic.com/; style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline'; image-src https:*; child-src 'none';">
+    <% } %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <meta name="mobile-web-app-capable" content="yes">
@@ -17,8 +20,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="shortcut icon" href="/static/img/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/icon/apple-touch-icon.png">
+    <% if (htmlWebpackPlugin.options.env.production) { %>
     <link rel="manifest" href="/static/manifest.json">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i">
+    <% } %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i">
 
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="msapplication-TileImage" content="/static/icon/ms-touch-icon-144x144-precomposed.png">

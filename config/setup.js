@@ -23,7 +23,10 @@ module.exports = isProd => {
       'process.env.NODE_ENV': JSON.stringify(isProd ? 'production' : 'development')
     }),
     new HtmlWebpackPlugin({
-      template: 'client-src/index.html'
+      template: 'client-src/index.html',
+      env: {
+        production: isProd
+      }
     }),
     new StyleLintPlugin({
       options: {
