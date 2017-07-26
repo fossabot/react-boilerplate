@@ -51,6 +51,7 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "uuid": "^3.1.0",
     "why-did-you-update": "^0.0.8"
   },
   "devDependencies": {
@@ -82,7 +83,7 @@
     "csswring": "^6.0.0",
     "enzyme": "^2.9.1",
     "eslint": "^4.3.0",
-    "eslint-config-airbnb": "^15.0.2",
+    "eslint-config-airbnb": "^15.1.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-import": "^2.7.0",
@@ -107,7 +108,7 @@
     "stylelint-no-unsupported-browser-features": "^1.0.0",
     "stylelint-scss": "^1.5.1",
     "stylelint-webpack-plugin": "^0.9.0",
-    "webpack": "^3.3.0",
+    "webpack": "^3.4.0",
     "webpack-dev-server": "^2.6.1"
   },
   "jest": {
