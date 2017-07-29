@@ -179,6 +179,7 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 
 ### Recommended Backends
 - [Graph.cool - GraphQL Database](https://www.graph.cool/) ($9/month)
+- [Firebase - REST Schemaless Database](https://firebase.google.com/) ($25/month)
 - [Prismic.io - CMS](https://prismic.io/) ($7 - $15/month)
 
 ### Video Hosting
