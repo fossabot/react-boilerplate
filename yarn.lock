@@ -3432,9 +3432,9 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flow-bin@^0.51.0:
-  version "0.51.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.51.0.tgz#97a3c511a17caa25d8fad58fc17aaabcb86319fe"
+flow-bin@^0.51.1:
+  version "0.51.1"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.51.1.tgz#7929c6f0a94e765429fcb2ee6e468278faa9c732"
 
 for-in@^0.1.3:
   version "0.1.8"
@@ -7846,16 +7846,15 @@ stylelint-no-unsupported-browser-features@^1.0.0:
     postcss "^6.0.1"
     stylelint ">=5.0.0"
 
-stylelint-scss@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-1.5.1.tgz#a5aae203fc5aaaba484c7d1380f28560b6f33ac0"
+stylelint-scss@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-2.0.0.tgz#033fd781b311e9a7604231ba0201559972b3eaf4"
   dependencies:
     lodash "^4.11.1"
     postcss-media-query-parser "^0.2.3"
     postcss-resolve-nested-selector "^0.1.1"
     postcss-selector-parser "^2.0.0"
     postcss-value-parser "^3.3.0"
-    stylelint "^7.0.3"
 
 stylelint-webpack-plugin@^0.9.0:
   version "0.9.0"
@@ -7907,7 +7906,7 @@ stylelint@>=5.0.0:
     svg-tags "^1.0.0"
     table "^4.0.1"
 
-stylelint@^7.0.3, stylelint@^7.8.0:
+stylelint@^7.8.0:
   version "7.13.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.13.0.tgz#111f97b6da72e775c80800d6bb6f5f869997785d"
   dependencies:
@@ -8574,9 +8573,9 @@ webpack-sources@1.0.1, webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.4.0.tgz#e9465b660ad79dd2d33874d968b31746ea9a8e63"
+webpack@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.4.1.tgz#4c3f4f3fb318155a4db0cb6a36ff05c5697418f4"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
