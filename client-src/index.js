@@ -56,7 +56,9 @@ OfflinePluginRuntime.install({
   },
 });
 
-/* eslint-disable */
-const ReactGA = require('react-ga');
-ReactGA.initialize('UA-000000-01');
-/* eslint-disable */
+if (process.env.NODE_ENV === 'production') {
+  /* eslint-disable */
+  const ReactGA = require('react-ga');
+  ReactGA.initialize('UA-000000-01');
+  /* eslint-disable */
+}
