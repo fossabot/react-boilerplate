@@ -177,10 +177,10 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 - [Buddy Works - CI/CD](https://buddy.works) ($49 - $99/month)
 - [DeployBot - CD](https://deploybot.com/) ($15 - $25/month)
 
-### Recommended Backends
-- [Graph.cool - GraphQL BaaS](https://www.graph.cool/) ($9/month)
-- [Scaphold - GraphQL BaaS](https://scaphold.io/) ($8/month)
-- [Firebase - REST BaaS (Schemaless)](https://firebase.google.com/) ($25/month)
+### Recommended BaaS
+- [Graph.cool - GraphQL](https://www.graph.cool/) ($9/month)
+- [Scaphold - GraphQL](https://scaphold.io/) ($8/month)
+- [Firebase - REST (Schemaless)](https://firebase.google.com/) ($25/month)
 - [GraphCMS - GraphQL CMS](https://graphcms.com/) ($29/month)
 - [Prismic.io - CMS](https://prismic.io/) ($7 - $15/month)
 
