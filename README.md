@@ -184,5 +184,8 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 - [GraphCMS - GraphQL CMS](https://graphcms.com/) ($29/month)
 - [Prismic.io - CMS](https://prismic.io/) ($7 - $15/month)
 
+### Testing Services
+- [Ghost Inspector](https://ghostinspector.com/) (71/month)
+
 ### Video Hosting
 - [Vimeo](https://vimeo.com/) ($7/month)
