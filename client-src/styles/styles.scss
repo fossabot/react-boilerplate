@@ -1,5 +1,8 @@
 // Non-critical CSS
 
+@import '../components/list/list',
+  '../components/list-item/list-item';
+
 .c-nav {
   border-bottom: .1rem solid gray;
   list-style: none;

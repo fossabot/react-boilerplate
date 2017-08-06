@@ -1,10 +1,6 @@
 import { combineReducers } from 'redux';
-import content from './contentReducer';
-import testCrud from './testCrudReducer';
-import state from './stateReducer';
+import listContentReducer from './listContentReducer';
 
 export default combineReducers({
-  content,
-  testCrud,
-  state,
+  listContentReducer,
 });

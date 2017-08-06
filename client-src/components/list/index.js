@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DataItem from './dataItem';
+import uuidv4 from 'uuid/v4';
+import ListItem from '../list-item';
 
 function List({ data }) {
   const emptyMessage = (
@@ -8,8 +9,8 @@ function List({ data }) {
   );
 
   const crudList = (
-    <div className="list">
-      { data.map(item => <DataItem item={item} key={Math.random()} />) }
+    <div className="c-list">
+      { data.map(item => <ListItem item={item} key={uuidv4()} />) }
     </div>
   );
 
