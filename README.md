@@ -165,6 +165,7 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 - [Let's Encrypt](https://letsencrypt.org/)
 
 ### Static Hosting
+- [Cloudflare](https://www.cloudflare.com/) ($20/month)
 - [Netlify](https://www.netlify.com) ($9/month)
 - [Surge](http://surge.sh/) ($13/month)
 
