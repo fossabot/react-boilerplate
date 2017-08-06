@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
 import ListPage from './pages/list';
 
 export default class App extends Component {
@@ -40,9 +40,11 @@ export default class App extends Component {
             <li><NavLink activeClassName="active" exact to="/">Home</NavLink></li>
             <li><NavLink activeClassName="active" exact to="/list">List</NavLink></li>
           </ul>
-          <Route path="/" exact render={() => (<div><img src="static/img/doge.png" alt="Doge" /><p>{this.props.content} {this.state.value}</p></div>)} />
-          <Route path="/list" component={ListPage} />
-          <Route render={() => (<p>This page does not exist</p>)} />
+          <Switch>
+            <Route path="/" exact render={() => (<div><img src="static/img/doge.png" alt="Doge" /><p>{this.props.content} {this.state.value}</p></div>)} />
+            <Route path="/list" component={ListPage} />
+            <Route render={() => (<p>This page does not exist</p>)} />
+          </Switch>
         </div>
       </Router>
     );
