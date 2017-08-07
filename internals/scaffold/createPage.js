@@ -4,9 +4,8 @@
 const fs = require('fs');
 const prompt = require('prompt');
 const _ = require('lodash');
-const classTemplate = require('./classTemplate');
+const pageTemplate = require('./pageTemplate');
 const testTemplate = require('./testTemplate');
-const scssTemplate = require('./scssTemplate');
 
 const newmask = 0;
 process.umask(newmask);
@@ -15,7 +14,7 @@ process.umask(newmask);
 const schema = {
   properties: {
     componentName: {
-      description: ('Component Name (lowercase w/ spaces): '),
+      description: ('Page Name (lowercase w/ spaces): '),
       type: 'string',
       required: true,
     },
@@ -34,26 +33,19 @@ prompt.get(schema, (err, result) => {
   const kebabCaseName = _.kebabCase(result.componentName);
 
   // Make the Component Directory
-  fs.mkdir(`./client-src/components/${kebabCaseName}`, (err) => {
+  fs.mkdir(`./client-src/pages/${kebabCaseName}`, (err) => {
     if (err) console.error(err);
   });
 
   // Create Class Component file
-  fs.writeFile(`./client-src/components/${kebabCaseName}/index.js`, classTemplate(capitalizedCaseName), (err) => {
+  fs.writeFile(`./client-src/pages/${kebabCaseName}/index.js`, pageTemplate(capitalizedCaseName), (err) => {
     if (err) {
       return console.log(err);
     }
   });
 
   // Create Jest Test file
-  fs.writeFile(`./client-src/components/${kebabCaseName}/${camelCaseName}.test.js`, testTemplate(capitalizedCaseName), (err) => {
-    if (err) {
-      return console.log(err);
-    }
-  });
-
-  // Create Sass/SCSS file
-  fs.writeFile(`./client-src/components/${kebabCaseName}/_${kebabCaseName}.scss`, scssTemplate(kebabCaseName), (err) => {
+  fs.writeFile(`./client-src/pages/${kebabCaseName}/${camelCaseName}.test.js`, testTemplate(capitalizedCaseName), (err) => {
     if (err) {
       return console.log(err);
     }

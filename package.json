@@ -26,6 +26,7 @@
     "visual:test": "backstop test",
     "scaffold:pure": "node ./internals/scaffold/createPure.js",
     "scaffold:class": "node ./internals/scaffold/createClass.js",
+    "scaffold:page": "node ./internals/scaffold/createPage.js",
     "stats": "webpack -p --env.production --config config/webpack --json > stats.json",
     "prebuild": "npm run test",
     "build": "webpack -p --env.production --config config/webpack",

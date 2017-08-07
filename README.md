@@ -64,6 +64,7 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 | visual:test | Tests the BackstopJS reference images against the current server and reports differences. |
 | scaffold:pure | Generates a Pure/Functional component template in the `client-src/components/` directory. |
 | scaffold:class | Generates a Stateful/Smart component template in the `client-src/components/` directory. |
+| scaffold:page | Generates a page template in the `client-src/pages/` directory. |
 | stats | Builds the project and generates a `stats.json` file in the main directory to be review through [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/). |
 | prebuild | Runs the `test` script before building the `client-src` directory with Webpack. |
 | build | Builds the `client-src` directory for production with Webpack. |

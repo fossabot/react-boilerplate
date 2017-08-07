@@ -60,3 +60,7 @@ prompt.get(schema, (err, result) => {
   });
 
 });
+
+process.on('uncaughtException', (err) => {
+  console.log(`Caught exception: ${err}`);
+});
