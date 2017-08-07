@@ -109,6 +109,12 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 ### Git GUI
 - [GitKraken](https://www.gitkraken.com/)
 
+### Redux Middleware
+- [Thunk](https://github.com/gaearon/redux-thunk) (REST Projects)
+- [Saga](https://github.com/redux-saga/redux-saga) (REST Large Projects)
+- [Apollo](http://dev.apollodata.com/react/redux.html) (GraphQL Projects)
+- [Redux Offline](https://github.com/jevakallio/redux-offline) (Offline-First Redux)
+
 ### Chrome Extensions
 
 #### Accessibility
@@ -154,11 +160,6 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 ### Image Optimization
 - [ImageOptim for OS X](https://imageoptim.com/mac)
 - [svgo](https://github.com/svg/svgo)
-
-### Chrome Extensions
-- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
-- [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 
 ## Integrations/Services
 
