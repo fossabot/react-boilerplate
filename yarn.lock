@@ -1148,9 +1148,9 @@ babel-plugin-transform-react-jsx@^6.24.1:
     babel-plugin-syntax-jsx "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-react-remove-prop-types@^0.4.9:
-  version "0.4.9"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.9.tgz#6805ef83d77bda94ded472ff2f2836bacd6ac44c"
+babel-plugin-transform-react-remove-prop-types@^0.4.10:
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.10.tgz#3c7f3a03ad8aa6bb8c00e93fd13a433910444545"
 
 babel-plugin-transform-regenerator@^6.22.0, babel-plugin-transform-regenerator@^6.24.1:
   version "6.24.1"
@@ -1516,13 +1516,13 @@ babylon@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
 
-backstopjs@^3.0.26:
-  version "3.0.26"
-  resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-3.0.26.tgz#c8f834dcd48a6c7fff612e6037802048aed76901"
+backstopjs@^3.0.29:
+  version "3.0.29"
+  resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-3.0.29.tgz#d694b24b6d30ce9b064968b7859b272f565b04b4"
   dependencies:
     casperjs "^1.1.0-beta5"
     chalk "^1.1.3"
-    chromy "0.5.2"
+    chromy "0.5.5"
     fs-extra "^0.30.0"
     junitwriter "~0.3.1"
     lodash "^4.17.4"
@@ -2023,11 +2023,12 @@ chrome-remote-interface@^0.23.2:
     commander "2.1.x"
     ws "2.0.x"
 
-chromy@0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/chromy/-/chromy-0.5.2.tgz#d630997dc773c89dac19737f0700f97f5adbd691"
+chromy@0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/chromy/-/chromy-0.5.5.tgz#bcf023b228517dda46b3d25956bea7fdf8858e1f"
   dependencies:
     async-chain-proxy "^0.1.5"
+    babel-runtime "^6.26.0"
     chrome-launcher "^0.4.0"
     chrome-remote-interface "^0.23.2"
     jimp "^0.2.28"
@@ -3293,9 +3294,9 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.8.0.tgz#229ef0e354e0e61d837c7a80fdfba825e199815e"
+eslint@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.9.0.tgz#76879d274068261b191fe0f2f56c74c2f4208e8b"
   dependencies:
     ajv "^5.2.0"
     babel-code-frame "^6.22.0"
@@ -3828,9 +3829,9 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flow-bin@^0.56.0:
-  version "0.56.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.56.0.tgz#ce43092203a344ba9bf63c0cabe95d95145f6cad"
+flow-bin@^0.57.2:
+  version "0.57.2"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.57.2.tgz#0b5ed4dd38a1991047e9bee71d62a763ae61b6b7"
 
 for-each@^0.3.2:
   version "0.3.2"
@@ -6972,9 +6973,9 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-loader@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.7.tgz#4d2da1489cee0a14f72c0d9440c9ee7eded34345"
+postcss-loader@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.8.tgz#8c67ddb029407dfafe684a406cfc16bad2ce0814"
   dependencies:
     loader-utils "^1.1.0"
     postcss "^6.0.0"
@@ -9272,9 +9273,9 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.6.0.tgz#a89a929fbee205d35a4fa2cc487be9cbec8898bc"
+webpack@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.7.1.tgz#6046b5c415ff7df7a0dc54c5b6b86098e8b952da"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
