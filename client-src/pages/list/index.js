@@ -5,7 +5,7 @@ import List from '../../components/list';
 
 class ListPage extends Component {
   static propTypes = {
-    listContent: PropTypes.array.isRequired,
+    listContent: PropTypes.array,
   };
 
   static defaultProps = {
