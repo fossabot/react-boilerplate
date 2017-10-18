@@ -1,5 +1,4 @@
-module.exports = function (name) { return (`/* @flow */
-import React, {Component} from 'react';
+module.exports = function (name) { return (`import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 export default class ${name}Page extends Component {
@@ -18,15 +17,6 @@ export default class ${name}Page extends Component {
       stateBool: true,
     };
   }
-
-  // Flow
-  state: {
-    value: string,
-  };
-
-  props: {
-    content: string,
-  };
 
   render() {
     const {
