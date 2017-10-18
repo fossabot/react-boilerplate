@@ -1,5 +1,3 @@
-/* @flow */
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
@@ -21,15 +19,6 @@ export default class App extends Component {
       value: 'Wow!',
     };
   }
-
-  // Flow types
-  state: {
-    value: string,
-  };
-
-  props: {
-    content: string,
-  };
 
   render() {
     return (

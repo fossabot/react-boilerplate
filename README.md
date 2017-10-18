@@ -6,7 +6,6 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 [![Webpack](/internals/img/webpack.png)](https://webpack.github.io/)
 [![Redux](/internals/img/redux.png)](http://redux.js.org/)
 [![React Router](/internals/img/react-router.png)](https://github.com/ReactTraining/react-router)
-[![Flow](/internals/img/flow.png)](https://flowtype.org/)
 [![ESLint](/internals/img/eslint.png)](http://eslint.org/)
 [![Jest](/internals/img/jest.png)](https://facebook.github.io/jest/)
 [![Yarn](/internals/img/yarn.png)](https://yarnpkg.com/)
@@ -48,7 +47,6 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 | [Webpack](http://webpack.github.io) | Bundles npm packages and our JS into a single file. Includes hot reloading via [react-transform-hmr](https://www.npmjs.com/package/react-transform-hmr). |
 | [Jest](https://facebook.github.io/jest/) | Automated tests with built-in expect assertions and [Enzyme](https://github.com/airbnb/enzyme) for DOM testing without a browser using Node. |
 | [ESLint](http://eslint.org/)| Lint JS. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React specific linting rules. |
-| [Flow](https://flow.org/)| Static type checker for Javascript |
 | [SASS](http://sass-lang.com/) | Compiled CSS styles with variables, functions, and more. |
 | [PostCSS](https://github.com/postcss/postcss) | Transform styles with JS plugins. Used to autoprefix CSS |
 | [BackstopJS](https://github.com/garris/BackstopJS)| Automated visual regression testing |
@@ -57,7 +55,6 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 ## Package.json Scripts
 | **Script** | **Description** |
 |----------|-------|
-| flow | Runs the static type checking across the files that specify `/* @flow */` in the `client-src` directory. |
 | jest | Runs Jest testing with the `--watch` flag for testing while developing. |
 | test | Runs the Jest testing and outputs a code coverage report. |
 | visual:init | Initializes BackstopJS's reference images for visual regression testing. |
