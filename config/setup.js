@@ -1,7 +1,7 @@
 const { join } = require('path');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const BabiliPlugin = require('babili-webpack-plugin');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 const ExtractText = require('extract-text-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const OfflinePlugin = require('offline-plugin');
@@ -81,7 +81,7 @@ module.exports = isProd => {
         },
         sourceMap: false,
       }),
-      new BabiliPlugin(),
+      new MinifyPlugin(),
       new ExtractText({
         filename: '[name].[hash].css',
         allChunks: true
