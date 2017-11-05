@@ -14,8 +14,8 @@
     "url": "https://github.com/jgunnison/react-boilerplate/issues"
   },
   "engines": {
-    "node": ">=6",
-    "npm": ">=3"
+    "node": ">=8",
+    "npm": ">=5"
   },
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,7 @@
     "server": "set NODE_ENV=production && node server.js"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.5",
     "compression": "^1.7.1",
     "express": "^4.16.2",

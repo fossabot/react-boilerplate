@@ -10,7 +10,7 @@ module.exports = (env) => {
   const isProd = env && env.production;
 
   const addHotEntries = () => {
-    const entriesObj = ['./client-src/index.js', './client-src/styles/core.scss', './client-src/styles/styles.scss'];
+    const entriesObj = ['./client-src/index.js', 'babel-polyfill', './client-src/styles/core.scss', './client-src/styles/styles.scss'];
     if (!isProd) {
       entriesObj.unshift('react-hot-loader/patch', 'webpack-dev-server/client?http://0.0.0.0:3000', 'webpack/hot/only-dev-server');
     }
