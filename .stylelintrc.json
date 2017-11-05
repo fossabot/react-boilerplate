@@ -1,8 +1,16 @@
 {
+  "extends": [
+    "stylelint-rscss/config"
+  ],
   "plugins": [
     "stylelint-scss",
     "./node_modules/stylelint-no-browser-hacks/lib/",
-    "stylelint-no-unsupported-browser-features"
+    "stylelint-no-unsupported-browser-features",
+    "stylelint-csstree-validator",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-images",
+    "stylelint-order",
+    "stylelint-selector-bem-pattern"
   ],
   "rules": {
     "plugin/no-unsupported-browser-features": [true, {
@@ -11,6 +19,19 @@
     }],
     "plugin/no-browser-hacks": [true, {
       "browsers": ["last 2 versions", "not ie 10"]
-    }]
+    }],
+    "csstree/validator": true,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "images/broken": true,
+    "images/prefer-data-uri": 256,
+    "order/properties-alphabetical-order": true,
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.u-[a-z]+$"
+    }
   }
 }
