@@ -1,7 +1,4 @@
 {
-  "extends": [
-    "stylelint-rscss/config"
-  ],
   "plugins": [
     "stylelint-scss",
     "./node_modules/stylelint-no-browser-hacks/lib/",
@@ -14,11 +11,11 @@
   ],
   "rules": {
     "plugin/no-unsupported-browser-features": [true, {
-      "browsers": ["last 2 versions", "not ie 10"],
+      "browsers": ["> 1%", "not ie 10", "not OperaMini all", "not UCAndroid >1"],
       "ignore": ["rem"]
     }],
     "plugin/no-browser-hacks": [true, {
-      "browsers": ["last 2 versions", "not ie 10"]
+      "browsers": ["> 1%", "not ie 10", "not OperaMini all", "not UCAndroid >1"]
     }],
     "csstree/validator": true,
     "plugin/declaration-block-no-ignored-properties": true,
