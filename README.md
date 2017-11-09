@@ -34,7 +34,7 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 
 ## To Do
 - Upgrade `why-did-you-update` to remove setter and resolve [this issue](https://github.com/garbles/why-did-you-update/issues/45).
-- Add [prepack-webpack-plugin](https://github.com/gajus/prepack-webpack-plugin) when available for Webpack 3.x.
+- Add [prepack-webpack-plugin](https://github.com/gajus/prepack-webpack-plugin) once it's reached a stable build.
 
 ## Technologies
 
