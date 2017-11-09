@@ -9,6 +9,7 @@ This is a React boilerplate with a bunch of features including linting for Sass/
 [![ESLint](/internals/img/eslint.png)](http://eslint.org/)
 [![Jest](/internals/img/jest.png)](https://facebook.github.io/jest/)
 [![Yarn](/internals/img/yarn.png)](https://yarnpkg.com/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjgunnison%2Freact-boilerplate.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjgunnison%2Freact-boilerplate?ref=badge_shield)
 
 ## Quick Start
 1. Clone the Repo.
@@ -190,3 +191,7 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 
 ### Video Hosting
 - [Vimeo](https://vimeo.com/) ($7/month)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjgunnison%2Freact-boilerplate.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjgunnison%2Freact-boilerplate?ref=badge_large)
