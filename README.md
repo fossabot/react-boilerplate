@@ -173,6 +173,7 @@ To run [Yarn Offline](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) just 
 - [DigitalOcean](https://www.digitalocean.com) ($5 - $10/month)
 
 ### Continuous Integration/Deployment Services
+- [CircleCI - CI/CD](https://circleci.com) ($50/month)
 - [Travis CI - CI/CD](https://travis-ci.com/) ($69 - $129/month)
 - [Buddy Works - CI/CD](https://buddy.works) ($49 - $99/month)
 - [DeployBot - CD](https://deploybot.com/) ($15 - $25/month)
